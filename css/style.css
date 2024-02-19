@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4db2ec;
+}
+.wrapper {
+  width: 485px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 9px 55px;
+}
+.wrapper header {
+  font-weight: 500;
+  font-size: 34px;
+  color: #4db2ec;
+  text-align: center;
+}
+.wrapper .captcha-area {
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 20px;
+}
+.captcha-area .captcha-image {
+  position: relative;
+  height: 100%;
+  width: 345px;
+  border-radius: 5px;
+  background: #000;
+  user-select: none;
+}
+.captcha-image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.captcha-image .captcha_num {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  letter-spacing: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 2px #b1b1b1;
+}
+.wrapper button {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #4db2ec;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.captcha-area .reload-btn {
+  width: 75px;
+  height: 100%;
+  font-size: 25px;
+}
+.wrapper .input_area {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+.input_area input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid #4db2ec;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.input_area input:is(:focus, :valid) {
+  border: 2px solid #4db2ec;
+  padding-left: 19px;
+}
+.input_area input:valid + .check_btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.input_area .check_btn {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  height: 45px;
+  font-size: 17px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.wrapper .status_text {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0 -5px 0;
+}
+.captcha-area .reload-btn {
+  width: 75px;
+  height: 100%;
+  font-size: 25px;
+}
+.captcha-area .reload-btn i {
+  transition: transform 0.3s ease;
+}
+.captcha-area .reload-btn:hover i {
+  transform: rotate(15deg);
+}
+.wrapper .input_area {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
